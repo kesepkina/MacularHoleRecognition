@@ -7,13 +7,13 @@ let confidence = document.querySelector('.confidence')
 let pconf = document.querySelector('.box-result p')
 
         
-        let progressBar = 
-            new ProgressBar.Circle('#progress', {
-            color: 'limegreen',
-            strokeWidth: 10,
-            duration: 2000, // milliseconds
-            easing: 'easeInOut'
-        });
+        // let progressBar = 
+        //     new ProgressBar.Circle('#progress', {
+        //     color: 'limegreen',
+        //     strokeWidth: 10,
+        //     duration: 2000, // milliseconds
+        //     easing: 'easeInOut'
+        // });
 
         async function fetchData(){
             let response = await fetch('./class_indices.json');
@@ -53,7 +53,7 @@ let pconf = document.querySelector('.box-result p')
                     console.log(data[class_idx])
                     console.log(prediction)
 
-                    progressBar.animate(prediction[class_idx]-0.005); // percent
+                    // progressBar.animate(prediction[class_idx]-0.005); // percent
 
                     pconf.style.display = 'block'
 
